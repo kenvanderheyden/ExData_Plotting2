@@ -1,5 +1,8 @@
 # exploratory data analysis - project 2 - plot 1
 
+# needed libraries / packages
+library(dplyr)
+
 # set the correct working dir
 setwd("~/Documents/Machine Learning/exploratory data analysis/ExData_Plotting2")
 
@@ -17,7 +20,7 @@ colnames(emisPerYear) <- c("year","emis")
 print(emisPerYear)
 
 # draw the plot 
-plot(emis ~ year, data=emisPerYear, type="b", xlab = "year", ylab = "total emissions", col="blue", main="Plot 1 - total emissions per year")
+plot(emis ~ year, data=emisPerYear, type="b", xlab = "year", ylab = "PM25 emissions", col="blue", main="Plot 1 - USA: total PM25 emissions per year")
 
 # after drawing, copy and save to a png file
 dev.copy(png,'plot1.png')
