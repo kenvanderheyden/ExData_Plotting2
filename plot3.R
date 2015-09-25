@@ -14,7 +14,7 @@ SCC <- readRDS("data/Source_Classification_Code.rds") # strictly this line of im
 NEI <- filter(NEI, fips == "24510")
 
 # create data frame, with dplyr package, calc sum of emissions per year
-emisByTypePerYear <- NEI %>% group_by(year, type) %>% summarise(sum(Emissions)) #%>% group_by(type)
+emisByTypePerYear <- NEI %>% group_by(year, type) %>% summarise(sum(Emissions))
 
 # rename the column names for easy use in plot 
 colnames(emisByTypePerYear) <- c("year", "type", "emis")
